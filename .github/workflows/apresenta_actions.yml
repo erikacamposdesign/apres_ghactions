@@ -1,0 +1,20 @@
+name: Apresentação GitHub Actions
+on:
+  schedule:
+  - cron: "1 * * * *"
+jobs: 
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo "O job começou automaticamente iniciado por um evento ${{ github.event_name }}."
+      - run: echo "O trabalho está executando em um servidor ${{ runner.os }} hospedado no GitHub!"
+      - run: echo "O nome da branch é ${{ github.ref }} e o seu repositório é ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "O repositório ${{ github.repository }} foi clonado para o runner."
+      - run: echo "O fluxo de trabalho agora está pronto para testar seu código no runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "O status do job é ${{ job.status }}."
