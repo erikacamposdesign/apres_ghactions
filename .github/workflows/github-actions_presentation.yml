@@ -2,7 +2,7 @@ name: Apresentação GitHub Actions
 on:
   schedule:
   - cron: "1 * * * *"
-jobs:
+jobs: 
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     
