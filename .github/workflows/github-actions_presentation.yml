@@ -2,7 +2,7 @@ name: Apresentação GitHub Actions
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       - run: echo "O job começou automaticamente iniciado por um evento ${{ github.event_name }}."
